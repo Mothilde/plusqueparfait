@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')  }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-theme.min.css')  }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/stylesheet.css')  }}" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+{% endblock %}
+{% block body %}
+    <h1>liste</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ liste.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomrepas</th>
+                <td>{{ liste.nomRepas }}</td>
+            </tr>
+            <tr>
+                <th>Daterepas</th>
+                <td>{% if liste.dateRepas %}{{ liste.dateRepas|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Descriptionrepas</th>
+                <td>{{ liste.descriptionRepas }}</td>
+            </tr>
+            <tr>
+                <th>Inviterepas</th>
+                <td>{{ liste.inviteRepas }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+            </li>
+        <li>
+            <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+
+{% endblock %}
