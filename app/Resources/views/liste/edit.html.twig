@@ -17,21 +17,10 @@
         <li>
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
         </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete" onclick="fonctionModal()" />
-            {{ form_end(delete_form) }}
-        </li>
-        <li>
 
-        </li>
     </ul>
 {% endblock %}
 {% block javascripts %}
-    function fonctionModal() {
-        if (confirm("Etes vous sur de votre choix ?") == true) {
-            
-        }
-    }
+
 {% endblock %}
 

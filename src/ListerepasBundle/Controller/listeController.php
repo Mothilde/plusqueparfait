@@ -127,13 +127,4 @@ class listeController extends Controller
         ;
     }
 
-/*return $this->createFormBuilder()
-->setAction($this->generateUrl('my_controller_delete', array('id' => $id)))
-->setMethod('DELETE')
-->add('submit,'submit', array('label' => 'Delete',
-'attr' => array(
-'onclick'=> 'return confirm("Are you sure?")'
-)))
-->getForm();
-}*/
-}
+    }
