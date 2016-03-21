@@ -1,0 +1,7 @@
+creationplat_creationplat:
+    resource: "@CreationplatBundle/Resources/config/routing/creationplat.yml"
+    prefix:   /creationplat
+
+creationplat_homepage:
+    path:     /
+    defaults: { _controller: CreationplatBundle:Default:index }

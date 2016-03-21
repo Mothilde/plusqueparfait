@@ -1,14 +1,12 @@
 <?php
 
-namespace ListerepasBundle\Form;
+namespace CreationplatBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use InviteBundle\Entity;
 
-
-class listeType extends AbstractType
+class creationplatType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -17,10 +15,17 @@ class listeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nomRepas')
-            ->add('dateRepas', 'datetime')
-            ->add('descriptionRepas')
-            ->add('inviteRepas')
+            ->add('nom')
+            ->add('ingredient1')
+            ->add('ingredients2')
+            ->add('ingredient3')
+            ->add('ingredient4')
+            ->add('ingredient5')
+            ->add('ingredient6')
+            ->add('ingredient7')
+            ->add('ingredient8')
+            ->add('ingredient9')
+            ->add('ingredient10')
         ;
     }
     
@@ -30,7 +35,7 @@ class listeType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ListerepasBundle\Entity\liste'
+            'data_class' => 'CreationplatBundle\Entity\creationplat'
         ));
     }
 }

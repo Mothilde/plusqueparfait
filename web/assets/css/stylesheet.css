@@ -38,6 +38,8 @@ table { /* Tableau regroupant la liste des repas */
 
 th, td { /* Modifications sur les élements du tableau -- Bordure ajoutée pour visualiser dans un premier temps */
     border: 1px solid black;
+    margin:5px;
+    text-align: center;
 }
 
 .colonne_nom { /* Alignement des noms de colonne sur le(s) tableau(x) */
@@ -78,3 +80,12 @@ a:focus { /* Modification des liens une fois cliqué */
     width: 100%;
 }
 
+#ingredients { /* tableau creation plat */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    text-align: center;
+}
+ tr {
+     margin: 5px;
+ }

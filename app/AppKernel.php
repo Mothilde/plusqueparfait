@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new OC\PlatformBundle\OCPlatformBundle(),
             new ListerepasBundle\ListerepasBundle(),
             new InviteBundle\InviteBundle(),
+            new CreationplatBundle\CreationplatBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

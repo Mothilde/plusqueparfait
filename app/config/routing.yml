@@ -1,5 +1,8 @@
 invite:
     resource: "@InviteBundle/Resources/config/routing.yml"
+
+creationplat:
+    resource: "@CreationplatBundle/Resources/config/routing.yml"
     prefix:   /
 
 listerepas:
