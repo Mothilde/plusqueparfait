@@ -42,10 +42,37 @@
             <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
         </li>
         <li>
+
+            <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
+                <i class="glyphicon glyphicon-trash"></i>
+                Supprimer
+            </button>
+
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <div class="modal fade" id="infos">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">x</button>
+                            <h4 class="modal-title">Confirmation</h4>
+                        </div>
+                        <div class="modal-body">
+                            Etes-vous sur de vouloir supprimer cet article ?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-info" data-dismiss="modal">OUI</button>
+                            <button class="btn btn-info" data-dismiss="modal">NON</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {{ form_end(delete_form) }}
         </li>
     </ul>
-
 {% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+{% endblock %}
+
