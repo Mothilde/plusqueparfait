@@ -1,0 +1,24 @@
+invites_index:
+    path:     /
+    defaults: { _controller: "InviteBundle:Invites:index" }
+    methods:  GET
+
+invites_show:
+    path:     /{id}/show
+    defaults: { _controller: "InviteBundle:Invites:show" }
+    methods:  GET
+
+invites_new:
+    path:     /new
+    defaults: { _controller: "InviteBundle:Invites:new" }
+    methods:  [GET, POST]
+
+invites_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InviteBundle:Invites:edit" }
+    methods:  [GET, POST]
+
+invites_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InviteBundle:Invites:delete" }
+    methods:  DELETE

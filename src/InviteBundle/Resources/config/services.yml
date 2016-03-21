@@ -1,0 +1,4 @@
+services:
+#    invite.example:
+#        class: InviteBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

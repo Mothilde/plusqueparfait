@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Invites list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nominvite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for invite in invites %}
+            <tr>
+                <td><a href="{{ path('invites_show', { 'id': invite.id }) }}">{{ invite.id }}</a></td>
+                <td>{{ invite.nomInvite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('invites_show', { 'id': invite.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('invites_new') }}">Create a new entry</a>
+        </li>
+    </ul>
+{% endblock %}

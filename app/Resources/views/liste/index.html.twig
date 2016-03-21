@@ -38,7 +38,7 @@
                 <th class="colonne_nom">Thème du repas</th>
                 <th class="colonne_nom">Date prévue</th>
                 <th class="colonne_nom">Description</th>
-                <th class="colonne_nom">Mes invités</th>
+                <a href="{{ path('invite_homepage') }}"<th class="colonne_nom">Mes invités</th></a>
                 <th class="colonne_nom">Actions</th>
             </tr>
         </thead>
@@ -52,8 +52,6 @@
                 <td>
                     <ul>
                         <li>
-                            a
-
                             <a href="{{ path('liste_show', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-search">&nbsp;Afficher</button></a>
                         </li>
                         <li>
@@ -65,7 +63,6 @@
         {% endfor %}
         </tbody>
     </table>
-
     <ul>
         <li id="creer_repas">
             <a href="{{ path('liste_new') }}"><button type="button" class="btn btn-success">Créer un nouveau repas</button></a>

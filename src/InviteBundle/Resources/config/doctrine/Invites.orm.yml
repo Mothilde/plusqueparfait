@@ -1,0 +1,16 @@
+InviteBundle\Entity\Invites:
+    type: entity
+    table: null
+    repositoryClass: InviteBundle\Repository\InvitesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomInvite:
+            type: string
+            length: 255
+            column: nom_invite
+    lifecycleCallbacks: {  }

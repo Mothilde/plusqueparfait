@@ -1,0 +1,7 @@
+invite_invites:
+    resource: "@InviteBundle/Resources/config/routing/invites.yml"
+    prefix:   /invites
+
+invite_homepage:
+    path:     /invites
+    defaults: { _controller: InviteBundle:Default:index }
