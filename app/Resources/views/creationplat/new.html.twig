@@ -27,19 +27,17 @@
             </div>
         </nav>
     </div>
-    <h1>Je crée mon nouveau repas :</h1>
+    <img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
+    <h1>Creation Plats</h1>
 
     {{ form_start(form) }}
-    <div class="formulaire">
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />`
-    </div>
-
+        <input type="submit" value="Create" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+            <a href="{{ path('creationplat_index') }}">Back to the list</a>
         </li>
     </ul>
 {% endblock %}

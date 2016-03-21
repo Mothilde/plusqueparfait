@@ -1,3 +1,7 @@
+creationplat:
+    resource: "@CreationplatBundle/Resources/config/routing.yml"
+    prefix:   /
+
 listerepas:
     resource: "@ListerepasBundle/Resources/config/routing.yml"
     prefix:   /

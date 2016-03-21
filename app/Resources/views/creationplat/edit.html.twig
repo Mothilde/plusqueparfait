@@ -16,7 +16,6 @@
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
                     <li> <a href="#">Mes invités</a> </li>
                     <li> <a href="{{ path('creationplat_homepage') }}">Mes recettes</a> </li>
-
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
@@ -27,19 +26,23 @@
             </div>
         </nav>
     </div>
-    <h1>Je crée mon nouveau repas :</h1>
+    <h1>creation Plats</h1>
 
-    {{ form_start(form) }}
-    <div class="formulaire">
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />`
+    {{ form_start(edit_form) }}
+<div class="formulaire">
+        {{ form_widget(edit_form) }}
+        <input type="submit" class="btn btn-success" value="Edit" />
     </div>
-
-    {{ form_end(form) }}
+    {{ form_end(edit_form) }}
 
     <ul>
         <li>
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-success">Back to the list</button></a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" class="btn btn-success" value="Delete">
+            {{ form_end(delete_form) }}
         </li>
     </ul>
 {% endblock %}

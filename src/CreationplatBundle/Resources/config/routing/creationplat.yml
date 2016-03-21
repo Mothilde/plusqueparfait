@@ -1,0 +1,24 @@
+creationplat_index:
+    path:     /
+    defaults: { _controller: "CreationplatBundle:creationplat:index" }
+    methods:  GET
+
+creationplat_show:
+    path:     /{id}/show
+    defaults: { _controller: "CreationplatBundle:creationplat:show" }
+    methods:  GET
+
+creationplat_new:
+    path:     /new
+    defaults: { _controller: "CreationplatBundle:creationplat:new" }
+    methods:  [GET, POST]
+
+creationplat_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CreationplatBundle:creationplat:edit" }
+    methods:  [GET, POST]
+
+creationplat_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CreationplatBundle:creationplat:delete" }
+    methods:  DELETE

@@ -1,0 +1,55 @@
+CreationplatBundle\Entity\creationplat:
+    type: entity
+    table: null
+    repositoryClass: CreationplatBundle\Repository\creationplatRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        ingredient1:
+            type: string
+            length: 255
+            nullable: true
+        ingredients2:
+            type: string
+            length: 255
+            nullable: true
+        ingredient3:
+            type: string
+            length: 255
+            nullable: true
+        ingredient4:
+            type: string
+            length: 255
+            nullable: true
+        ingredient5:
+            type: string
+            length: 255
+            nullable: true
+        ingredient6:
+            type: string
+            length: 255
+            nullable: true
+        ingredient7:
+            type: string
+            length: 255
+            nullable: true
+        ingredient8:
+            type: string
+            length: 255
+            nullable: true
+        ingredient9:
+            type: string
+            length: 255
+            nullable: true
+        ingredient10:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')  }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-theme.min.css')  }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/stylesheet.css')  }}" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+{% endblock %}
+
+{% block body %}
+    <div class="navbar_homepage">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
+                    <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
+                    <li> <a href="#">Mes invités</a> </li>
+                    <li> <a href="{{ path('creationplat_homepage') }}">Mes recettes</a> </li>
+                </ul>
+                <form class="navbar-form navbar-right inline-form">
+                    <div class="form-group">
+                        <input type="search" class="input-sm form-control" placeholder="Recherche">
+                        <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <h1>Creation Plats</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ creationplat.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ creationplat.nom }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient1</th>
+                <td>{{ creationplat.ingredient1 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredients2</th>
+                <td>{{ creationplat.ingredients2 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient3</th>
+                <td>{{ creationplat.ingredient3 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient4</th>
+                <td>{{ creationplat.ingredient4 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient5</th>
+                <td>{{ creationplat.ingredient5 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient6</th>
+                <td>{{ creationplat.ingredient6 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient7</th>
+                <td>{{ creationplat.ingredient7 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient8</th>
+                <td>{{ creationplat.ingredient8 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient9</th>
+                <td>{{ creationplat.ingredient9 }}</td>
+            </tr>
+            <tr>
+                <th>Ingredient10</th>
+                <td>{{ creationplat.ingredient10 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('creationplat_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
