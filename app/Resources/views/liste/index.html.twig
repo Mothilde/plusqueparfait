@@ -14,7 +14,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
-                    <li> <a href="#">Mes invités</a> </li>
+                    <li> <a href="{{ path('invites_index') }}">Mes invités</a> </li>
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
@@ -38,7 +38,7 @@
                 <th class="colonne_nom">Thème du repas</th>
                 <th class="colonne_nom">Date prévue</th>
                 <th class="colonne_nom">Description</th>
-                <a href="{{ path('invite_homepage') }}"<th class="colonne_nom">Mes invités</th></a>
+                <th class="colonne_nom">Mes invités</th>
                 <th class="colonne_nom">Actions</th>
             </tr>
         </thead>

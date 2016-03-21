@@ -19,6 +19,11 @@ class Invites
      */
     private $nomInvite;
 
+    /**
+     * @var boolean
+     */
+    private $vegetarien;
+
 
     /**
      * Get id
@@ -51,5 +56,28 @@ class Invites
     public function getNomInvite()
     {
         return $this->nomInvite;
+    }
+
+    /**
+     * Set vegetarien
+     *
+     * @param boolean $vegetarien
+     * @return Invites
+     */
+    public function setVegetarien($vegetarien)
+    {
+        $this->vegetarien = $vegetarien;
+
+        return $this;
+    }
+
+    /**
+     * Get vegetarien
+     *
+     * @return boolean
+     */
+    public function getVegetarien()
+    {
+        return $this->vegetarien;
     }
 }

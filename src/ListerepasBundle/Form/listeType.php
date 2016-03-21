@@ -5,6 +5,7 @@ namespace ListerepasBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use InviteBundle\Entity;
 
 class listeType extends AbstractType
 {
@@ -18,7 +19,7 @@ class listeType extends AbstractType
             ->add('nomRepas')
             ->add('dateRepas', 'datetime')
             ->add('descriptionRepas')
-            ->add('inviteRepas')
+            ->add('nomInvite')
         ;
     }
     

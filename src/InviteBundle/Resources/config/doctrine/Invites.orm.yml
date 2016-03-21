@@ -13,4 +13,7 @@ InviteBundle\Entity\Invites:
             type: string
             length: 255
             column: nom_invite
+        vegetarien:
+            type: boolean
+            nullable: false
     lifecycleCallbacks: {  }

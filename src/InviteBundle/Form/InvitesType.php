@@ -16,6 +16,7 @@ class InvitesType extends AbstractType
     {
         $builder
             ->add('nomInvite')
+            ->add('vegetarien')
         ;
     }
     
