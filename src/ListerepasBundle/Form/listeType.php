@@ -19,7 +19,7 @@ class listeType extends AbstractType
             ->add('nomRepas')
             ->add('dateRepas', 'datetime')
             ->add('descriptionRepas')
-            ->add('nomInvite')
+            ->add('inviteRepas')
         ;
     }
     
