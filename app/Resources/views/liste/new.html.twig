@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')  }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-theme.min.css')  }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/stylesheet.css')  }}" />
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+{% endblock %}
+
+{% block body %}
+    <h1>Je crée mon nouveau repas :</h1>
+
+    {{ form_start(form) }}
+    <div class="formulaire">
+        {{ form_widget(form) }}
+        <input type="submit" value="Create" />`
+    </div>
+
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+        </li>
+    </ul>
+{% endblock %}
