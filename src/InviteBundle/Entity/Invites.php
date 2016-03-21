@@ -5,17 +5,20 @@ namespace InviteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Invites
+ * @ORMTable(name="invites")
+ * @ORMEntity
  */
 class Invites
 {
     /**
-     * @var int
+     * @ORMColumn(name="id", type="int", nullable="false")
+     * @ORMId
+     * @ORMGeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
     /**
-     * @var string
+     * @ORMColumn(name="nom_invite", type="string", length=255, nullable="true")
      */
     private $nomInvite;
 
