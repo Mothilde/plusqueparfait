@@ -26,23 +26,27 @@
             </div>
         </nav>
     </div>
-    <h1>creation Plats</h1>
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Créer un Plat</h1>
+    </div>
+
 
     {{ form_start(edit_form) }}
-<div class="formulaire">
+    <div class="formulaire">
         {{ form_widget(edit_form) }}
-        <input type="submit" class="btn btn-success" value="Edit" />
-    </div>
-    {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-success">Back to the list</button></a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" class="btn btn-success" value="Delete">
+        <input type="submit" class="btn btn-success" value="Edit" />
+
+
+
+
+            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Back to the list</button></a>
+
+
+            <input type="submit" class="btn btn-danger" value="Delete">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
+    </div>
+
 {% endblock %}

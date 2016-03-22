@@ -78,6 +78,8 @@ a:focus { /* Modification des liens une fois cliqué */
 .formulaire {
     margin-left: 100px;
     width: 100%;
+    margin-top: 10px;
+
 }
 
 #ingredients { /* tableau creation plat */
@@ -89,3 +91,16 @@ a:focus { /* Modification des liens une fois cliqué */
  tr {
      margin: 5px;
  }
+
+ .btn {
+     margin-top: 15px;
+ }
+
+ #home_page {
+     text-align: center;
+     border: 1px;
+ }
+
+
+
+
