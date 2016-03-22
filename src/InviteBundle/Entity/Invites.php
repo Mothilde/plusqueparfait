@@ -5,17 +5,17 @@ namespace InviteBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Invites
+ * invites
  */
 class Invites
 {
     /**
-     * @var int
+     * var $int
      */
     private $id;
 
     /**
-     * @var string
+     * var $string
      */
     private $nomInvite;
 
@@ -78,6 +78,7 @@ class Invites
      */
     public function getVegetarien()
     {
+
         return $this->vegetarien;
     }
 }

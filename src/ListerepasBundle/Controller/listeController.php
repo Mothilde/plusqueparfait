@@ -44,7 +44,7 @@ class listeController extends Controller
             $em->persist($liste);
             $em->flush();
 
-            return $this->redirectToRoute('liste_show');
+            return $this->redirectToRoute('liste_index');
         }
 
         return $this->render('liste/new.html.twig', array(
@@ -122,9 +122,7 @@ class listeController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('liste_delete', array('id' => $liste->getId())))
             ->setMethod('DELETE')
-
             ->getForm()
         ;
     }
-
-    }
+}
