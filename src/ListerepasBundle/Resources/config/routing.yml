@@ -3,7 +3,7 @@ listerepas_liste:
     prefix:   /liste
 
 listerepas_homepage:
-    path:     /
+    path:     /accueil
     defaults: { _controller: ListerepasBundle:Default:index }
 
 # src/OC/PlatformBundle/Resources/config/routing.yml

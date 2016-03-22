@@ -16,7 +16,8 @@
                 <ul class="nav navbar-nav">
                     <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
-                    <li> <a href="#">Mes invités</a> </li>
+                    <li> <a href="">Mes invités</a> </li>
+                    <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
@@ -26,6 +27,14 @@
                 </form>
             </div>
         </nav>
+    </div>
+    </div>
+    <h1 id="home_page"><strong>Caro Presque Parfaite</strong></h1>
+    <img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
+
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Bienvenue !</h1>
     </div>
 
 
