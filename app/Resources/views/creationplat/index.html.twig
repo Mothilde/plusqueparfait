@@ -12,10 +12,11 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
+                    <li> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
                     <li> <a href="{{ path('invites_index') }}">Mes invités</a> </li>
-                    <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
+                    <li class="active"> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
+
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
@@ -49,10 +50,11 @@
                 <td>
                     <ul>
                         <li>
+
                             <a href="{{ path('creationplat_show', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info">Afficher</button></a></a>
                         </li>
                         <li>
-                            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
+                            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Modifier</button></a>
                         </li>
                     </ul>
                 </td>
@@ -63,7 +65,7 @@
 
     <ul>
         <li id="creer_plat">
-            <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success">Create a new entry</button></a>
+            <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success">Créer</button></a>
         </li>
     </ul>
 {% endblock %}
