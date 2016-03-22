@@ -12,9 +12,9 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
+                    <li> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
-                    <li> <a href="">Mes invités</a> </li>
+                    <li class="active"> <a href="">Mes invités</a> </li>
                     <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
@@ -26,7 +26,7 @@
             </div>
         </nav>
     </div>
-    <h1>Mes invités :</h1>
+    <h1>Mes invités </h1>
     <table>
         <thead>
             <tr>
@@ -57,7 +57,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('invites_new') }}">Create a new entry</a>
+            <a href="{{ path('invites_new') }}"</a><button type="button" class="btn btn-success">Créer</button>
         </li>
     </ul>
 {% endblock %}
