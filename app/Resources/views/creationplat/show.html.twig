@@ -14,8 +14,8 @@
                 <ul class="nav navbar-nav">
                     <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
-                    <li> <a href="#">Mes invités</a> </li>
-                    <li> <a href="{{ path('creationplat_homepage') }}">Mes recettes</a> </li>
+                    <li> <a href="">Mes invités</a> </li>
+                    <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
@@ -26,72 +26,68 @@
             </div>
         </nav>
     </div>
-    <h1>Creation Plats</h1>
+
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Ma liste de Courses</h1>
+    </div>
 
     <table>
         <tbody>
+
             <tr>
-                <th>Id</th>
-                <td>{{ creationplat.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
+
                 <td>{{ creationplat.nom }}</td>
             </tr>
             <tr>
-                <th>Ingredient1</th>
+
                 <td>{{ creationplat.ingredient1 }}</td>
             </tr>
             <tr>
-                <th>Ingredients2</th>
+
                 <td>{{ creationplat.ingredients2 }}</td>
             </tr>
             <tr>
-                <th>Ingredient3</th>
+
                 <td>{{ creationplat.ingredient3 }}</td>
             </tr>
             <tr>
-                <th>Ingredient4</th>
+
                 <td>{{ creationplat.ingredient4 }}</td>
             </tr>
             <tr>
-                <th>Ingredient5</th>
+
                 <td>{{ creationplat.ingredient5 }}</td>
             </tr>
             <tr>
-                <th>Ingredient6</th>
+
                 <td>{{ creationplat.ingredient6 }}</td>
             </tr>
             <tr>
-                <th>Ingredient7</th>
+
                 <td>{{ creationplat.ingredient7 }}</td>
             </tr>
             <tr>
-                <th>Ingredient8</th>
+
                 <td>{{ creationplat.ingredient8 }}</td>
             </tr>
             <tr>
-                <th>Ingredient9</th>
+
                 <td>{{ creationplat.ingredient9 }}</td>
             </tr>
             <tr>
-                <th>Ingredient10</th>
+
                 <td>{{ creationplat.ingredient10 }}</td>
             </tr>
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('creationplat_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}">Edit</a>
-        </li>
-        <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Back to the list</button></a>
+
+            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Edit</button></a>
+
+            <input type="submit" class="btn btn-danger" value="Delete">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
 {% endblock %}

@@ -13,9 +13,8 @@
                 <ul class="nav navbar-nav">
                     <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
-                    <li> <a href="#">Mes invités</a> </li>
-                    <li> <a href="{{ path('creationplat_homepage') }}">Mes recettes</a> </li>
-
+                    <li> <a href="">Mes invités</a> </li>
+                    <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
@@ -32,8 +31,11 @@
     <div class="formulaire">
         {{ form_widget(form) }}
 
-        <input type="submit" value="Create" />`
+
     </div>
+    <input type="submit" class="btn btn-success" value="Create" />`
+    <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+
     <a data-toggle="modal" href="#infos" class="btn btn-danger">
         <i class="glyphicon glyphicon-trash"></i>
         Supprimer
@@ -57,11 +59,5 @@
         </div>
     </div>
     {{ form_end(form) }}
-
-
-    <ul>
-        <li>
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-        </li>
-    </ul>
+    
 {% endblock %}
