@@ -24,8 +24,11 @@
     <div class="formulaire">
         {{ form_widget(form) }}
 
-        <input type="submit" value="Create" />`
+
     </div>
+    <input type="submit" class="btn btn-success" value="Create" />`
+    <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+
     <a data-toggle="modal" href="#infos" class="btn btn-danger">
         <i class="glyphicon glyphicon-trash"></i>
         Supprimer
@@ -51,9 +54,6 @@
     {{ form_end(form) }}
 
 
-    <ul>
-        <li>
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-        </li>
-    </ul>
+
+
 {% endblock %}
