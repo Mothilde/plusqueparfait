@@ -29,10 +29,7 @@
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ liste.id }}</td>
-            </tr>
+
             <tr>
                 <th>Nomrepas</th>
                 <td>{{ liste.nomRepas }}</td>
@@ -54,7 +51,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
             </li>
         <li>
             <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
@@ -66,7 +63,7 @@
                 Supprimer
             </button>
 
-            {{ form_start(delete_form) }}
+
             <div class="modal fade" id="infos">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -77,16 +74,17 @@
                         <div class="modal-body">
                             Etes-vous sur de vouloir supprimer cet article ?
                         </div>
+                        {{ form_start(delete_form) }}
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-info" data-dismiss="modal">OUI</button>
+                            <button type="submit" class="btn btn-info" >OUI</button>
                             <button class="btn btn-info" data-dismiss="modal">NON</button>
                         </div>
+                        {{ form_end(delete_form) }}
                     </div>
                 </div>
             </div>
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
+
 {% endblock %}
 
 {% block javascripts %}

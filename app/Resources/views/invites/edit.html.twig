@@ -5,9 +5,9 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
+                    <li> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
-                    <li> <a href="">Mes invités</a> </li>
+                    <li class="active"> <a href="">Mes invités</a> </li>
                     <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
@@ -23,16 +23,16 @@
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Valider" />
     {{ form_end(edit_form) }}
 
     <ul>
         <li>
-            <a href="{{ path('invites_index') }}">Back to the list</a>
+            <a href="{{ path('invites_index') }}">Retour à la liste</a>
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+                <input type="submit" value="Supprimer">
             {{ form_end(delete_form) }}
         </li>
     </ul>

@@ -17,7 +17,7 @@ class creationplatType extends AbstractType
         $builder
             ->add('nom')
             ->add('ingredient1')
-            ->add('ingredients2')
+            ->add('ingredient2')
             ->add('ingredient3')
             ->add('ingredient4')
             ->add('ingredient5')

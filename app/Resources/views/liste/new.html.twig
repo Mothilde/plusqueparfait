@@ -11,8 +11,8 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
-                    <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
+                    <li> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
+                    <li class="active"> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
                     <li> <a href="">Mes invités</a> </li>
                     <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
                 </ul>
@@ -31,36 +31,9 @@
     <div class="formulaire">
         {{ form_widget(form) }}
 
-        <input type="submit" value="Create" />`
+        <a href="{{ path ('liste_show') }}"></a><input type="submit" value="Créer" />
     </div>
-    <a data-toggle="modal" href="#infos" class="btn btn-danger">
-        <i class="glyphicon glyphicon-trash"></i>
-        Supprimer
-    </a>
 
-    <div class="modal fade" id="infos">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">x</button>
-                    <h4 class="modal-title">Confirmation</h4>
-                </div>
-                <div class="modal-body">
-                    Etes-vous sur de vouloir supprimer cet article ?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-dismiss="modal">OUI</button>
-                    <button class="btn btn-info" data-dismiss="modal">NON</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{ form_end(form) }}
-
-
-    <ul>
-        <li>
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-        </li>
-    </ul>
+    {{ form_end(form) }}
 {% endblock %}
