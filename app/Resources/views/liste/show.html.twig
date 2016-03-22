@@ -52,21 +52,18 @@
         </tbody>
     </table>
 
-    <ul>
         <li>
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
             </li>
         <li>
             <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
         </li>
-        <li>
 
             <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
                 <i class="glyphicon glyphicon-trash"></i>
                 Supprimer
             </button>
 
-            {{ form_start(delete_form) }}
             <div class="modal fade" id="infos">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -78,15 +75,14 @@
                             Etes-vous sur de vouloir supprimer cet article ?
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-info" data-dismiss="modal">OUI</button>
+                            {{ form_start(delete_form) }}
+                            <button type="submit" value="OUI" class=" btn btn-info">OUI</button>
+                            {{ form_end(delete_form) }}
                             <button class="btn btn-info" data-dismiss="modal">NON</button>
                         </div>
                     </div>
                 </div>
             </div>
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
 {% endblock %}
 
 {% block javascripts %}
