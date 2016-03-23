@@ -71,8 +71,9 @@ a:focus { /* Modification des liens une fois cliqué */
     color: white;
     text-decoration: none;
 }
-#creer_repas { /* Marge à gauche placée pour le bouton "Créer un nouveau repas" */
+.creer_repas, .creer_invites, .creer_plat{ /* Marge à gauche placée pour le bouton "Créer" */
     margin-left: 4.5%;
+    margin-top: 10px;
 }
 
 .formulaire {
@@ -92,13 +93,13 @@ a:focus { /* Modification des liens une fois cliqué */
      margin: 5px;
  }
 
- .btn {
-     margin-top: 15px;
- }
-
  #home_page {
      text-align: center;
      border: 1px;
+ }
+ .bienvenue { /*titre de bienvenue*/
+     margin-left:520px ;
+
  }
 
 
