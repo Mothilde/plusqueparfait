@@ -22,6 +22,7 @@
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
+
         <input type="submit" value="Modifier" />
     {{ form_end(edit_form) }}
 
@@ -30,7 +31,8 @@
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
         </li>
 
-    </ul>
+        <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+    {{ form_end(edit_form) }}
 {% endblock %}
 {% block javascripts %}
 

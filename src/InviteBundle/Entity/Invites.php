@@ -10,12 +10,16 @@ use Doctrine\ORM\Mapping as ORM;
 class Invites
 {
     /**
-     * var $int
+
+     * @var int
+
      */
     private $id;
 
     /**
-     * var $string
+
+     * @var string
+
      */
     private $nomInvite;
 
