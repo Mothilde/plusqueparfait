@@ -52,14 +52,11 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
+
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-            </li>
-        <li>
+
             <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
-        </li>
-        <li>
+
 
             <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
                 <i class="glyphicon glyphicon-trash"></i>

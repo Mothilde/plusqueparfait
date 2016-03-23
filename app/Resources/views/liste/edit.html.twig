@@ -28,15 +28,11 @@
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" class="btn btn-success" value="Edit" />
+
+
+        <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
     {{ form_end(edit_form) }}
-
-    <ul>
-        <li>
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-        </li>
-
-    </ul>
 {% endblock %}
 {% block javascripts %}
 

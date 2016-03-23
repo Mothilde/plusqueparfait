@@ -41,10 +41,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('invites_show', { 'id': invite.id }) }}">show</a>
+                            <a href="{{ path('invites_show', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">show</button></a>
                         </li>
                         <li>
-                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}">edit</a>
+                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">edit</button></a>
                         </li>
                     </ul>
                 </td>
@@ -55,7 +55,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('invites_new') }}">Create a new entry</a>
+            <a href="{{ path('invites_new') }}"><button type="button" class="btn btn-success">Create a new entry</button></a>
         </li>
     </ul>
 {% endblock %}
