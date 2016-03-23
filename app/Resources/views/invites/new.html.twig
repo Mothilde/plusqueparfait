@@ -22,8 +22,7 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-    <a href="{{ path ('invites_index') }}"></a><input type="submit" value="Créer" />
-    <a href="{{ path('invites_index') }}">Retour à la liste</a>
+    <button type="submit" class="btn btn-success">Créer</button>
+    <a href="{{ path('invites_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
     {{ form_end(form) }}
-
 {% endblock %}
