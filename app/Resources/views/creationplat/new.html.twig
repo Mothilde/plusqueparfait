@@ -19,15 +19,23 @@
             </div>
         </nav>
     </div>
-    <img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
-    <h1>Creation Plats</h1>
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Mes Recettes</h1>
+    </div>
 
+    <div id="liste_course">
     {{ form_start(form) }}
         {{ form_widget(form) }}
+        {{ form_end(form) }}
+        </div>
 
-    <button type="button" class="btn btn-success">Créer</button></a>
+    <div class="liste_course">
+    <button type="submit" class="btn btn-success">Créer</button>
 
-        <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-    {{ form_end(form) }}
+    <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
+
+    </div>
+
 
 {% endblock %}

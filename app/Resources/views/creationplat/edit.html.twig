@@ -20,23 +20,23 @@
     </div>
     <div class="header_menu">
         <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
-        <h1>Créer un Plat</h1>
+        <h1>Modifier un Plat</h1>
+    </div>
+    <div id="liste_course"
+    {{ form_start(edit_form) }}
+    {{ form_widget(edit_form) }}
+    {{ form_end(delete_form) }}
     </div>
 
+    <div class="liste_course">
 
-    {{ form_start(edit_form) }}
-    <div class="formulaire">
-        {{ form_widget(edit_form) }}
 
         <input type="submit" class="btn btn-success" value="Modifier" />
 
+            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span>Retour à la liste</button></a>
 
-            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-success">Retour à la liste</button></a>
+                <input type="submit" class="btn btn-danger" value="Supprimer">
 
-
-                <input type="submit" class="btn btn-success" value="Supprimer">
-
-            {{ form_end(delete_form) }}
 
     </div>
 
