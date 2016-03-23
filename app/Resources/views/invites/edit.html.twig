@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
     <div class="navbar_homepage">
         <nav class="navbar navbar-inverse">
@@ -25,7 +24,6 @@
         {{ form_widget(edit_form) }}
         <input type="submit" value="Valider" />
     {{ form_end(edit_form) }}
-
     <ul>
         <li>
             <a href="{{ path('invites_index') }}">Retour à la liste</a>
