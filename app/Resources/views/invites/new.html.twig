@@ -1,12 +1,4 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')  }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-theme.min.css')  }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/stylesheet.css')  }}" />
-    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-
-{% endblock %}
-
 {% block body %}
     <div class="navbar_homepage">
         <nav class="navbar navbar-inverse">
@@ -30,10 +22,8 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-    <a href="{{ path ('invites_show') }}"></a><input type="submit" value="Créer" />
-    {{ form_end(form) }}
-
-
+    <a href="{{ path ('invites_index') }}"></a><input type="submit" value="Créer" />
     <a href="{{ path('invites_index') }}">Retour à la liste</a>
+    {{ form_end(form) }}
 
 {% endblock %}
