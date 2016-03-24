@@ -24,18 +24,19 @@
         <h1>Mes Recettes</h1>
     </div>
 
-    <div id="liste_course">
+    <div id="liste_course_new">
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        {{ form_end(form) }}
-        </div>
 
-    <div class="liste_course">
+
+
     <button type="submit" class="btn btn-success">Créer</button>
+        <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span>Retour à la liste</button></a>
 
-    <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-
+        {{ form_end(form) }}
     </div>
+
+
 
 
 {% endblock %}

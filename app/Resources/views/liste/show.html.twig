@@ -18,41 +18,40 @@
             </div>
         </nav>
     </div>
-    <h1>liste</h1>
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Mon Repas</h1>
+    </div>
 
     <table>
         <tbody>
 
             <tr>
-                <th>Nomrepas</th>
+                <th>Nom repas</th>
                 <td>{{ liste.nomRepas }}</td>
             </tr>
             <tr>
-                <th>Daterepas</th>
+                <th>Date</th>
                 <td>{% if liste.dateRepas %}{{ liste.dateRepas|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Descriptionrepas</th>
+                <th>Description</th>
                 <td>{{ liste.descriptionRepas }}</td>
             </tr>
             <tr>
-                <th>Inviterepas</th>
+                <th>Invités</th>
                 <td>{{ liste.inviteRepas }}</td>
             </tr>
         </tbody>
     </table>
+<div class="liste_show">
 
-        <li>
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-            </li>
-        <li>
+            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-chevron-left"></span>Retour à la liste</button></a>
+
             <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
-        </li>
 
             <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
-                <i class="glyphicon glyphicon-trash"></i>
-                Supprimer
-            </button>
+                <i class="glyphicon glyphicon-trash"></i>Supprimer</button>
             <div class="modal fade" id="infos">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -73,10 +72,6 @@
                     </div>
                 </div>
             </div>
-{% endblock %}
-
-{% block javascripts %}
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </div>
 {% endblock %}
 

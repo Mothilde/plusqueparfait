@@ -83,6 +83,7 @@ a:focus { /* Modification des liens une fois cliqué */
     margin-top: 10px;
 }
 
+
 .formulaire {
     margin-left: 100px;
     width: 100%;
@@ -120,5 +121,14 @@ a:focus { /* Modification des liens une fois cliqué */
 
  }
 
+ #liste_course_new {
+     margin-left: 7.5%;
+     margin-top: 10px;
+ }
+
+.liste_show { /* bouton vue liste */
+    margin-left: 7.5%;
+    margin-top: 10px;
+}
 
 
