@@ -31,20 +31,15 @@
         <h1>Créer un Plat</h1>
     </div>
 
-
     {{ form_start(edit_form) }}
     <div class="formulaire">
         {{ form_widget(edit_form) }}
 
-        <input type="submit" class="btn btn-success" value="Edit" />
+        <input type="submit" class="btn btn-success" value="Editer" />
 
+        <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
 
-
-
-            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Back to the list</button></a>
-
-
-            <input type="submit" class="btn btn-danger" value="Delete">
+            <input type="submit" class="btn btn-danger" value="Supprimer">
             {{ form_end(delete_form) }}
 
     </div>

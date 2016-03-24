@@ -9,6 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class creationplat
 {
+
+    public $file;
     /**
      * @var int
      */
@@ -22,6 +24,12 @@ class creationplat
     /**
      * @var string
      */
+    private $Description;
+
+    /**
+     * @var string
+     */
+
     private $photo;
 
     /**
@@ -78,7 +86,7 @@ class creationplat
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -101,12 +109,32 @@ class creationplat
     /**
      * Get nom
      *
-     * @return string 
+     * @return string
      */
     public function getNom()
     {
         return $this->nom;
     }
+
+
+    public function setDescription($Description)
+    {
+        $this->Description = $Description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->Description;
+    }
+
+
 
     /**
      * Set photo
@@ -124,7 +152,7 @@ class creationplat
     /**
      * Get photo
      *
-     * @return string 
+     * @return string
      */
     public function getPhoto()
     {
@@ -147,7 +175,7 @@ class creationplat
     /**
      * Get ingredient1
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient1()
     {
@@ -170,7 +198,7 @@ class creationplat
     /**
      * Get ingredients2
      *
-     * @return string 
+     * @return string
      */
     public function getIngredients2()
     {
@@ -193,7 +221,7 @@ class creationplat
     /**
      * Get ingredient3
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient3()
     {
@@ -216,7 +244,7 @@ class creationplat
     /**
      * Get ingredient4
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient4()
     {
@@ -239,7 +267,7 @@ class creationplat
     /**
      * Get ingredient5
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient5()
     {
@@ -262,7 +290,7 @@ class creationplat
     /**
      * Get ingredient6
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient6()
     {
@@ -285,7 +313,7 @@ class creationplat
     /**
      * Get ingredient7
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient7()
     {
@@ -308,7 +336,7 @@ class creationplat
     /**
      * Get ingredient8
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient8()
     {
@@ -331,7 +359,7 @@ class creationplat
     /**
      * Get ingredient9
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient9()
     {
@@ -354,10 +382,12 @@ class creationplat
     /**
      * Get ingredient10
      *
-     * @return string 
+     * @return string
      */
     public function getIngredient10()
     {
         return $this->ingredient10;
+
+
     }
 }

@@ -72,11 +72,11 @@
     </table>
 
             {{ form_start(delete_form) }}
-            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Back to the list</button></a>
+            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
 
-            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Edit</button></a>
+            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Editer</button></a>
 
-            <input type="submit" class="btn btn-danger" value="Delete">
+            <input type="submit" class="btn btn-danger" value="Supprimer">
             {{ form_end(delete_form) }}
 
 {% endblock %}
