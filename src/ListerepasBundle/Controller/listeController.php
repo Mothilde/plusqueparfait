@@ -44,7 +44,7 @@ class listeController extends Controller
             $em->persist($liste);
             $em->flush();
 
-            return $this->redirectToRoute('liste_show');
+            return $this->redirectToRoute('liste_index');
         }
 
         return $this->render('liste/new.html.twig', array(

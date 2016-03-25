@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block body %}
+
     <div class="navbar_homepage">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -26,20 +27,12 @@
                     </div>
                 </form>
             </div>
+
+        <div id="container">
+            <img id="epices" src="{{ asset ('assets/images/homepage.jpg') }}" alt="home page"/>
+    </div>
         </nav>
     </div>
-    <div  id="home_page">
-    <h1><strong>Caro Presque Parfaite</strong></h1>
-    </div>
-    <img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
-
-    <div class="header_menu">
-        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
-        <h1>Bienvenue !</h1>
-        <p>La voila ma jolie application pour gérer mes repas avec mes amis !</p>
-    </div>
-
-
 {% endblock %}
 
 
