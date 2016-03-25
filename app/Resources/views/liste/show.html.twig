@@ -4,8 +4,8 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
-                    <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
+                    <li> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
+                    <li class="active"> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
                     <li> <a href="">Mes invités</a> </li>
                     <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
                 </ul>
@@ -18,30 +18,33 @@
             </div>
         </nav>
     </div>
-    <h1>liste</h1>
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Mon Repas</h1>
+    </div>
 
     <table>
         <tbody>
 
             <tr>
-                <th>Nomrepas</th>
+                <th>Nom repas</th>
                 <td>{{ liste.nomRepas }}</td>
             </tr>
             <tr>
-                <th>Daterepas</th>
+                <th>Date</th>
                 <td>{% if liste.dateRepas %}{{ liste.dateRepas|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
-                <th>Descriptionrepas</th>
+                <th>Description</th>
                 <td>{{ liste.descriptionRepas }}</td>
             </tr>
             <tr>
-                <th>Inviterepas</th>
+                <th>Invités</th>
                 <td>{{ liste.inviteRepas }}</td>
             </tr>
         </tbody>
     </table>
-
+<div class="liste_show">
 
 
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
@@ -55,6 +58,7 @@
                 Supprimer
             </button>
         </li>
+
             <div class="modal fade" id="infos">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -76,11 +80,13 @@
                 </div>
             </div>
 
+
 {% endblock %}
 
 {% block javascripts %}
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+=
 {% endblock %}
 

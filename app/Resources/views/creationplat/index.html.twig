@@ -26,7 +26,7 @@
     </div>
 
 
-    <table id="ingredients">
+    <table id="liste_course">
         <thead>
             <tr>
                 <th>Nom</th>
@@ -42,7 +42,7 @@
                     <ul>
                         <li>
 
-                            <a href="{{ path('creationplat_show', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info">Afficher</button></a></a>
+                            <a href="{{ path('creationplat_show', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-search">&nbsp;Afficher</button></a></a>
                         </li>
                         <li>
                             <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Modifier</button></a>
@@ -56,7 +56,7 @@
 
     <ul>
         <li class="creer_plat">
-            <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success">Créer</button></a>
+            <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success">Ajouter une recette</button></a>
         </li>
     </ul>
 {% endblock %}

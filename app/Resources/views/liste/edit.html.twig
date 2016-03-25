@@ -22,22 +22,19 @@
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-<<<<<<< HEAD
+
 
     <input type="submit" class="btn btn-success" value="Modifier" />
 
 
+    {{ form_end(edit_form) }}
+
 
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
 
+        </li>
+    </ul>
 
-
-=======
-        <input type="submit" class="btn btn-success" value="Edit" />
-
-
-        <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
->>>>>>> origin/devmathilde
     {{ form_end(edit_form) }}
 {% endblock %}
 {% block javascripts %}

@@ -73,10 +73,16 @@ a:focus { /* Modification des liens une fois cliqué */
     color: white;
     text-decoration: none;
 }
-.creer_repas, .creer_invites, .creer_plat{ /* Marge à gauche placée pour le bouton "Créer" */
+.creer_repas, .creer_invites, .creer_plat { /* Marge à gauche placée pour le bouton "Créer" */
     margin-left: 4.5%;
     margin-top: 10px;
 }
+
+.liste_course {/* placement boutons liste de course */
+    margin-left: 7.5%;
+    margin-top: 10px;
+}
+
 
 .formulaire {
     margin-left: 100px;
@@ -132,5 +138,20 @@ a:focus { /* Modification des liens une fois cliqué */
      text-align: center;
  }
 
+ #liste_course { /*tableau creation plat show */
+     width: 30%;
+     margin-left: 7.5%;
+
+ }
+
+ #liste_course_new {
+     margin-left: 7.5%;
+     margin-top: 10px;
+ }
+
+.liste_show { /* bouton vue liste */
+    margin-left: 7.5%;
+    margin-top: 10px;
+}
 
 

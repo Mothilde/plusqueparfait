@@ -16,7 +16,7 @@ creationplat_new:
 creationplat_edit:
     path:     /{id}/edit
     defaults: { _controller: "CreationplatBundle:creationplat:edit" }
-    methods:  [GET, POST]
+    methods:  [GET, POST, DELETE]
 
 creationplat_delete:
     path:     /{id}/delete

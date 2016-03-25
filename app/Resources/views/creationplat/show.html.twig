@@ -24,7 +24,7 @@
         <h1>Ma liste de Courses</h1>
     </div>
 
-    <table>
+    <table id="liste_course">
         <tbody>
 
             <tr>
@@ -62,13 +62,13 @@
             </tr>
         </tbody>
     </table>
-
+            <li class="liste_course">
             {{ form_start(delete_form) }}
-            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Back to the list</button></a>
+                <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Modifier</button></a>
+                <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span>Retour à la liste</button></a>
 
-            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Edit</button></a>
-
-            <input type="submit" class="btn btn-danger" value="Delete">
+            <input type="submit" class="btn btn-danger" value="Effacer">
             {{ form_end(delete_form) }}
+            </li>
 
 {% endblock %}
