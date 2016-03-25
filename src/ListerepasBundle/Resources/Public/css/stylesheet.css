@@ -1,5 +1,6 @@
 body{ /* Body principal */
     background-color: #CDC8AA;
+    opacity: 0.1;
     font-family: Raleway;
 }
 
@@ -89,20 +90,36 @@ a:focus { /* Modification des liens une fois cliqué */
     padding: 5px;
     text-align: center;
 }
- tr {
-     margin: 5px;
- }
+tr {
+    margin: 5px;
+}
 
- #home_page {
-     text-align: center;
-     border: 1px;
- }
- .bienvenue { /*titre de bienvenue*/
-     margin-left:520px ;
+#home_page {
+    text-align: center;
+    border: 1px;
+}
+.bienvenue { /*titre de bienvenue*/
+    margin-left:520px ;
 
- }
+}
 
-
+/*.rating {
+    direction: rtl;
+}
+.rating a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+}
+.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a{
+    color: yellow;
+    cursor: pointer;
+}
+*/
 
 .listeEtoile ul {
     margin: 0;
@@ -115,6 +132,9 @@ a:focus { /* Modification des liens une fois cliqué */
     text-align: left;
     list-style-type: none;
 }
+
+
+
 
 
 

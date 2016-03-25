@@ -44,20 +44,19 @@
 
         <li>
             <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-            </li>
-        <li>
-            <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
-        </li>
+
+            <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info">&nbsp;Editer</button></a>
 
             <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
                 <i class="glyphicon glyphicon-trash"></i>
                 Supprimer
             </button>
+        </li>
             <div class="modal fade" id="infos">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">x</button>
+                            <button type="button" class="close">x</button>
                             <h4 class="modal-title">Confirmation</h4>
                         </div>
                         <div class="modal-body">
@@ -73,10 +72,12 @@
                     </div>
                 </div>
             </div>
+
 {% endblock %}
 
 {% block javascripts %}
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 {% endblock %}
 
