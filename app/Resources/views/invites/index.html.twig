@@ -38,10 +38,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('invites_show', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">show</button></a>
+                            <a href="{{ path('invites_show', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">Voir</button></a>
                         </li>
                         <li>
-                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">edit</button></a>
+                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">Editer</button></a>
                         </li>
                     </ul>
                 </td>
@@ -51,8 +51,8 @@
     </table>
     <ul>
 
-        <li class="creer_invites">
-            <a href="{{ path('invites_new') }}"</a><button type="button" class="btn btn-success">Créer</button>
+        <li>
+            <a href="{{ path('invites_new') }}"><button type="button" class="btn btn-success">Ajouter un invité</button></a>
 
         </li>
     </ul>

@@ -63,11 +63,13 @@
         </tbody>
     </table>
             <li class="liste_course">
-            {{ form_start(delete_form) }}
-                <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Modifier</button></a>
-                <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span>Retour à la liste</button></a>
 
-            <input type="submit" class="btn btn-danger" value="Effacer">
+            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
+
+            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Editer</button></a>
+
+            <input type="submit" class="btn btn-danger" value="Supprimer">
+
             {{ form_end(delete_form) }}
             </li>
 

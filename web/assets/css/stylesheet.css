@@ -2,9 +2,21 @@ body{ /* Body principal */
     background-color: #CDC8AA;
     font-family: Raleway;
 }
+#container{
+    margin-left: 0 !important;
+    padding-top: 0 !important;
+    height: 100% !important;
+
+}
+
+#epices {
+    width:1200px !important;
+}
 
 .navbar_homepage { /* Navbar de la page d'accueil */
     width: 100%;
+    padding-bottom: 0;
+
 }
 
 #caro_image { /* Logo du haut avec Caroline dessus */
