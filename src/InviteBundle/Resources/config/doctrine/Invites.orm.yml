@@ -2,6 +2,7 @@ InviteBundle\Entity\Invites:
     type: entity
     table: null
     repositoryClass: InviteBundle\Repository\InvitesRepository
+
     id:
         id:
             type: integer
@@ -16,4 +17,17 @@ InviteBundle\Entity\Invites:
         vegetarien:
             type: boolean
             nullable: false
+
+    manyToMany:
+        listerepas:
+            targetEntity: ListerepasBundle\Entity\liste
+            joinTable:
+                name: Invites_listerepas
+                joinColumns:
+                    invites_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    liste_id:
+                        referencedColumnName: id
+
     lifecycleCallbacks: {  }

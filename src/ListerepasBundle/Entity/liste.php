@@ -2,6 +2,7 @@
 
 namespace ListerepasBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -34,16 +35,27 @@ class liste
      */
     private $inviteRepas;
 
+    /*
+    /**
+     * Définition du constructeur pour récupérer les propriétés des ArrayCollection.
+
+    /* public function __construct()
+    {
+        $this->inviteRepas = new \Doctrine\Common\Collections\ArrayCollection();
+    } **/
+
 
     /**
      * Get id
      *
      * @return integer 
      */
+
     public function getId()
     {
         return $this->id;
     }
+
 
     /**
      * Set nomRepas
@@ -114,18 +126,39 @@ class liste
         return $this->descriptionRepas;
     }
 
+
     /**
-     * Set inviteRepas
-     *
-     * @param string $inviteRepas
-     * @return liste
+     * Set invite
      */
     public function setInviteRepas($inviteRepas)
     {
         $this->inviteRepas = $inviteRepas;
-
         return $this;
+
     }
+    /*
+    /**
+     * Add invite
+     *
+     * @param InviteBundle\Entity\Invites.php $nomInvite
+     */
+    /* public function addInvite(InviteBundle\Entity\Invites $invites)
+        // On utilise la fonction [addInvite] sans "S", car on souhaite ajouter seulement UN invité !
+    {
+        $this->inviteRepas = $invites;
+    }
+
+    /**
+     * Remove invite
+     *
+     * @param InviteBundle\Entity\Invites.php $nomInvite
+
+    public function removeInvite(InviteBundle\Entity\Invites $invites)
+        // On souhaite supprimer seulement UN invité.
+    {
+        // Pour supprimer un élément, on utilise une méthode de l'ArrayCollection
+        $this->inviteRepas->removeElement($invites);
+    } */
 
     /**
      * Get inviteRepas

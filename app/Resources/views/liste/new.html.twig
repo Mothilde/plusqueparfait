@@ -23,10 +23,8 @@
     {{ form_start(form) }}
     <div class="formulaire">
         {{ form_widget(form) }}
-
         <button type="submit" class="btn btn-success">Créer</button>
         <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
     </div>
-
     {{ form_end(form) }}
 {% endblock %}

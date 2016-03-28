@@ -2,6 +2,7 @@
 
 namespace InviteBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +29,19 @@ class Invites
      */
     private $vegetarien;
 
+    /**
+     * @var ArrayCollection
+     */
+    private $listerepas;
+
+
+    /**
+     * Constructeur
+     */
+    public function __construct()
+    {
+        $this->listerepas = new ArrayCollection();
+    }
 
     /**
      * Get id
