@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+
 {% block body %}
     <div class="navbar_homepage">
         <nav class="navbar navbar-inverse">
@@ -26,5 +27,6 @@
         <button type="submit" class="btn btn-success">Créer</button>
         <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
     </div>
+
     {{ form_end(form) }}
 {% endblock %}

@@ -5,7 +5,7 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li class="active"> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
+                    <li> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
                     <li> <a href="">Mes invités</a> </li>
                     <li class="active"> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
@@ -24,18 +24,13 @@
         <h1>Mes Recettes</h1>
     </div>
 
-    <div id="liste_course">
+    <div id="liste_course_new">
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        {{ form_end(form) }}
-        </div>
 
-    <div class="liste_course">
-    <button type="submit" class="btn btn-success">Créer</button>
+        <input type="submit" class="btn btn-success" value="Créer un nouveau plat" />
 
-    <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-
-    </div>
-
+        <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
+    {{ form_end(form) }}
 
 {% endblock %}

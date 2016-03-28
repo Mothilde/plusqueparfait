@@ -33,17 +33,13 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('invites_index') }}">Retour à la liste</a>
-        </li>
-        <li>
-            <a href="{{ path('invites_edit', { 'id': invite.id }) }}">Valider</a>
-        </li>
-        <li>
+            <a href="{{ path('invites_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+
+            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
+
             {{ form_start(delete_form) }}
-                <input type="submit" value="Supprimer">
+                <input type="submit" class="btn btn-danger" value="Supprimer">
+
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
 {% endblock %}

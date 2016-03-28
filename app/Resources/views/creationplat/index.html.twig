@@ -19,7 +19,7 @@
             </div>
         </nav>
     </div>
-
+    <img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
     <div class="header_menu">
         <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
         <h1>Mes Recettes</h1>
@@ -31,6 +31,9 @@
             <tr>
                 <th>Nom</th>
                 <th>Actions</th>
+                <!--<th>Description</th>
+                <th>Photos</th>-->
+
             </tr>
         </thead>
         <tbody>
@@ -55,8 +58,10 @@
     </table>
 
     <ul>
-        <li class="creer_plat">
-            <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success">Ajouter une recette</button></a>
+
+        <li id="creer_plat">
+            <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success">Créer une nouvelle recettes</button></a>
+
         </li>
     </ul>
 {% endblock %}

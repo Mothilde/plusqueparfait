@@ -2,9 +2,21 @@ body{ /* Body principal */
     background-color: #CDC8AA;
     font-family: Raleway;
 }
+#container{
+    margin-left: 0 !important;
+    padding-top: 0 !important;
+    height: 100% !important;
+
+}
+
+#epices {
+    width:1200px !important;
+}
 
 .navbar_homepage { /* Navbar de la page d'accueil */
     width: 100%;
+    padding-bottom: 0;
+
 }
 
 #caro_image { /* Logo du haut avec Caroline dessus */
@@ -83,6 +95,7 @@ a:focus { /* Modification des liens une fois cliqué */
     margin-top: 10px;
 }
 
+
 .formulaire {
     margin-left: 100px;
     width: 100%;
@@ -110,6 +123,29 @@ a:focus { /* Modification des liens une fois cliqué */
 
  }
 
+
+
+.listeEtoile ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.listeEtoile ul li {
+    display:inline-block;
+    width: 16px;
+    text-align: left;
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
  p{
      text-align: center;
  }
@@ -120,5 +156,14 @@ a:focus { /* Modification des liens une fois cliqué */
 
  }
 
+ #liste_course_new {
+     margin-left: 7.5%;
+     margin-top: 10px;
+ }
+
+.liste_show { /* bouton vue liste */
+    margin-left: 7.5%;
+    margin-top: 10px;
+}
 
 

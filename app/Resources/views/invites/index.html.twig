@@ -18,6 +18,7 @@
             </div>
         </nav>
     </div>
+<img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
 <div class="header_menu">
     <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
     <h1>Mes invités </h1>
@@ -37,10 +38,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('invites_show', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">show</button></a>
+                            <a href="{{ path('invites_show', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">Voir</button></a>
                         </li>
                         <li>
-                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">edit</button></a>
+                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">Editer</button></a>
                         </li>
                     </ul>
                 </td>
@@ -50,8 +51,9 @@
     </table>
     <ul>
 
-        <li class="creer_invites">
-            <a href="{{ path('invites_new') }}"</a><button type="button" class="btn btn-success">Créer</button>
+        <li>
+            <a href="{{ path('invites_new') }}"><button type="button" class="btn btn-success">Ajouter un invité</button></a>
+
         </li>
     </ul>
 {% endblock %}

@@ -16,6 +16,7 @@ class creationplatType extends AbstractType
     {
         $builder
             ->add('nom')
+            ->add('Description')
             ->add('ingredient1')
             ->add('ingredients2')
             ->add('ingredient3')
@@ -26,7 +27,14 @@ class creationplatType extends AbstractType
             ->add('ingredient8')
             ->add('ingredient9')
             ->add('ingredient10')
+            ->add('file', 'file', array('label' => 'Ajouter une photo', 'required' => false))
         ;
+
+    }
+
+    public function getName()
+    {
+        return 'CreationplatBundle_creationplatType';
     }
     
     /**
