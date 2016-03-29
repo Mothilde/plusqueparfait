@@ -2,6 +2,7 @@ ListerepasBundle\Entity\liste:
     type: entity
     table: null
     repositoryClass: ListerepasBundle\Repository\listeRepository
+
     id:
         id:
             type: integer
@@ -24,6 +25,13 @@ ListerepasBundle\Entity\liste:
         inviteRepas:
             type: string
             length: 255
-            nullable: true
             column: invite_Repas
+            nullable: true
+            unique: false
+
+    # manyToMany:
+    #    inviteRepas:
+    #        targetEntity: InviteBundle\Entity\Invites
+    #        mappedBy: listerepas
+    #        nullable: true
     lifecycleCallbacks: {  }
