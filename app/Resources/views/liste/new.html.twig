@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
     <div class="navbar_homepage">
         <nav class="navbar navbar-inverse">
@@ -20,16 +19,11 @@
         </nav>
     </div>
     <h1>Je crée mon nouveau repas :</h1>
-
     {{ form_start(form) }}
-    <div class="formulaire">
-        {{ form_widget(form) }}
-
-
-    </div>
-    <input type="submit" class="btn btn-success" value="Créer" />`
-    <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-
-
+        <div class="formulaire">
+    {{ form_widget(form) }}
+        </div>
+        <input type="submit" class="btn btn-success" value="Créer" />`
+        <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
     {{ form_end(form) }}
 {% endblock %}

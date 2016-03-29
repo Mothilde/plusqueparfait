@@ -18,15 +18,12 @@
             </div>
         </nav>
     </div>
-
     <div class="header_menu">
         <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
         <h1>Ma liste de Courses</h1>
     </div>
-
     <table id="liste_course">
         <tbody>
-
             <tr>
                 <td>{{ creationplat.nom }}</td>
             </tr>
@@ -62,15 +59,30 @@
             </tr>
         </tbody>
     </table>
-            <li class="liste_course">
-
-            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-
-            <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Editer</button></a>
-
-            <input type="submit" class="btn btn-danger" value="Supprimer">
-
-            {{ form_end(delete_form) }}
-            </li>
-
+    <li class="liste_show">
+        <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
+        <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-success">Editer</button></a>
+        <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
+            <i class="glyphicon glyphicon-trash"></i>Supprimer</button>
+    </li>
+    <div class="modal fade" id="infos">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close">x</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    Etes-vous sur de vouloir supprimer cet article ?
+                </div>
+                {{ form_start(delete_form) }}
+                <div class="modal-footer">
+                    {{ form_start(delete_form) }}
+                    <button type="submit" value="OUI" class=" btn btn-info">OUI</button>
+                    {{ form_end(delete_form) }}
+                    <button class="btn btn-info" data-dismiss="modal">NON</button>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

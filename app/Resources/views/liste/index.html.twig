@@ -19,12 +19,10 @@
         </nav>
     </div>
     <img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
-
     <div class="header_menu">
         <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
         <h1>Mes Repas</h1>
     </div>
-
     <table>
         <thead>
             <tr>
@@ -41,29 +39,23 @@
             <tr>
                 <td>{{ liste.nomRepas }}</td>
                 <td>{% if liste.dateRepas %}{{ liste.dateRepas|date('Y-m-d H:i:s') }}{% endif %}</td>
-                <td>{{ liste.descriptionRepas }}></td>
+                <td>{{ liste.descriptionRepas }}</td>
                 <td>{{ liste.inviteRepas }}</td>
-                <td class="listeEtoile" onmouseout="GestionHover('A1', -1, '5')">
+                <td class="listeEtoile" onmouseout="GestionHover('A{{ liste.id }}', -1, '5')">
                     <ul>
                         <li>
-                            <a href="javascript:ChoixSelection('A1', '1', '5')" onmouseover="GestionHover('A1', '1', '5')"><img id="staroff-A1-1" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="1" style="border-width: 0px; display: none;"><img id="staron-A1-1" src="{{ asset('assets/images/staron.gif') }}" border="0" title="1" style="border-width: 0px; display: block;"></a></li>
+                            <a href="javascript:ChoixSelection('A{{ liste.id }}', '1', '5')" onmouseover="GestionHover('A{{ liste.id }}', '1', '5')"><img id="staroff-A{{ liste.id }}-1" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="1" style="border-width: 0px; display: none;"><img id="staron-A{{ liste.id }}-1" src="{{ asset('assets/images/staron.gif') }}" border="0" title="1" style="border-width: 0px; display: block;"></a></li>
                         <li>
-                            <a href="javascript:ChoixSelection('A1', '2', '5')" onmouseover="GestionHover('A1', '2', '5')"><img id="staroff-A1-2" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="2" style="border-width: 0px; display: none;"><img id="staron-A1-2" src="{{ asset('assets/images/staron.gif') }}" border="0" title="2" style="border-width: 0px; display: block;"></a></li>
+                            <a href="javascript:ChoixSelection('A{{ liste.id }}', '2', '5')" onmouseover="GestionHover('A{{ liste.id }}', '2', '5')"><img id="staroff-A{{ liste.id }}-2" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="2" style="border-width: 0px; display: none;"><img id="staron-A{{ liste.id }}-2" src="{{ asset('assets/images/staron.gif') }}" border="0" title="2" style="border-width: 0px; display: block;"></a></li>
                         <li>
-                            <a href="javascript:ChoixSelection('A1', '3', '5')" onmouseover="GestionHover('A1', '3', '5')"><img id="staroff-A1-3" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="3" style="border-width: 0px; display: none;"><img id="staron-A1-3" src="{{ asset('assets/images/staron.gif') }}" border="0" title="3" style="border-width: 0px; display: block;"></a></li>
+                            <a href="javascript:ChoixSelection('A{{ liste.id }}', '3', '5')" onmouseover="GestionHover('A{{ liste.id }}', '3', '5')"><img id="staroff-A{{ liste.id }}-3" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="3" style="border-width: 0px; display: none;"><img id="staron-A{{ liste.id }}-3" src="{{ asset('assets/images/staron.gif') }}" border="0" title="3" style="border-width: 0px; display: block;"></a></li>
                         <li>
-                            <a href="javascript:ChoixSelection('A1', '4', '5')" onmouseover="GestionHover('A1', '4', '5')"><img id="staroff-A1-4" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="4" style="border-width: 0px; display: none;"><img id="staron-A1-4" src="{{ asset('assets/images/staron.gif') }}" border="0" title="4" style="border-width: 0px; display: block;"></a></li>
+                            <a href="javascript:ChoixSelection('A{{ liste.id }}', '4', '5')" onmouseover="GestionHover('A{{ liste.id }}', '4', '5')"><img id="staroff-A{{ liste.id }}-4" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="4" style="border-width: 0px; display: none;"><img id="staron-A{{ liste.id }}-4" src="{{ asset('assets/images/staron.gif') }}" border="0" title="4" style="border-width: 0px; display: block;"></a></li>
                         <li>
-                            <a href="javascript:ChoixSelection('A1', '5', '5')" onmouseover="GestionHover('A1', '5', '5')"><img id="staroff-A1-5" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="5" style="border-width: 0px; display: block;"><img id="staron-A1-5" src="{{ asset('assets/images/staron.gif') }}" border="0" title="5" style="border-width: 0px; display: none;"></a></li>
-                        <label id="score-A1"> 4/5</label>
+                            <a href="javascript:ChoixSelection('A{{ liste.id }}', '5', '5')" onmouseover="GestionHover('A{{ liste.id }}', '5', '5')"><img id="staroff-A{{ liste.id }}-5" src= "{{ asset('assets/images/staroff.gif') }}" border="0" title="5" style="border-width: 0px; display: block;"><img id="staron-A{{ liste.id }}-5" src="{{ asset('assets/images/staron.gif') }}" border="0" title="5" style="border-width: 0px; display: none;"></a></li>
+                        <label id="score-A{{ liste.id }}"></label>
                     </ul>
                 </td>
-                <!--<td class="rating">
-                    <a href="#" title="Donner 5 étoiles">☆</a>
-                    <a href="#" title="Donner 4 étoiles">☆</a>
-                    <a href="#" title="Donner 3 étoiles">☆</a>
-                    <a href="#" title="Donner 2 étoiles">☆</a>
-                    <a href="#" title="Donner 1 étoile">☆</a></td>-->
                 <td>
                     <ul>
                         <li>
@@ -83,10 +75,7 @@
             <a href="{{ path('liste_new') }}"><button type="button" class="btn btn-success">Créer un nouveau repas</button></a>
         </li>
     </ul>
-
 {% endblock %}
-
-
 {% block javascripts %}
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -165,5 +154,4 @@
             document.getElementById(idListe).outerHTML = renduListe;
         }
     </script>
-
 {% endblock %}

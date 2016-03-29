@@ -18,27 +18,13 @@
             </div>
         </nav>
     </div>
-    <h1>Je modifie mon repas :</h1>
-
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Je modifie mon repas</h1>
+    </div>
     {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-
-
-    <input type="submit" class="btn btn-success" value="Modifier" />
-
-
-    {{ form_end(edit_form) }}
-
-
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-
-        </li>
-    </ul>
-
+    {{ form_widget(edit_form) }}
+        <input type="submit" class="btn btn-success" value="Modifier" />
+        <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
     {{ form_end(edit_form) }}
 {% endblock %}
-{% block javascripts %}
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-{% endblock %}
-

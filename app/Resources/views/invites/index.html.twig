@@ -4,24 +4,25 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
-                    <li> <a href="{{ path('listerepas_homepage') }}">Accueil</a> </li>
-                    <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
-                    <li class="active"> <a href="">Mes invités</a> </li>
-                    <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
+                    <li><a href="{{ path('listerepas_homepage') }}">Accueil</a></li>
+                    <li><a href="{{ path('liste_index') }}">Mes repas</a></li>
+                    <li class="active"> <a href="">Mes invités</a></li>
+                    <li> <a href="{{ path('creationplat_index') }}">Mes recettes</a></li>
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
-                        <input type="search" class="input-sm form-control" placeholder="Recherche">
+                        <input type="search" class="input-sm form-control" placeholder="Recherche" />
                         <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
                     </div>
                 </form>
             </div>
         </nav>
     </div>
-<img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
-<div class="header_menu">
-    <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
-    <h1>Mes invités </h1>
+    <img id="caro_image" src="{{ asset('assets/images/caro.png') }}" alt="caro" />
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Mes invités </h1>
+    </div>
     <table>
         <thead>
             <tr>
@@ -31,29 +32,31 @@
             </tr>
         </thead>
         <tbody>
-        {% for invite in invites %}
-            <tr>
-                <td>{{ invite.nomInvite }}</td>
-                <td>{{ invite.vegetarien }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('invites_show', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">Voir</button></a>
-                        </li>
-                        <li>
-                            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info">Editer</button></a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
+            {% for invite in invites %}
+                <tr>
+                    <td>
+                        {{ invite.nomInvite }}
+                    </td>
+                    <td>
+                        {{ invite.vegetarien }}
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('invites_show', { 'id': invite.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-search">&nbsp;Voir</button></a>
+                            </li>
+                            <li>
+                                <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
     <ul>
-
-        <li>
+        <li class="creer_invites">
             <a href="{{ path('invites_new') }}"><button type="button" class="btn btn-success">Ajouter un invité</button></a>
-
         </li>
     </ul>
 {% endblock %}

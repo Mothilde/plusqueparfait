@@ -24,43 +24,32 @@
     </div>
     <div class="liste_course">
         {{ form_start(edit_form) }}
-            {{ form_widget(edit_form) }}
-        <input type="submit" class="btn btn-success" value="Modifier" />
-        <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span>Retour à la liste</button></a>
-
+        {{ form_widget(edit_form) }}
+            <input type="submit" class="btn btn-success" value="Modifier" />
+            <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span>Retour à la liste</button></a>
+        {{ form_end(edit_form) }}
         <!-- Début de la modal, bouton supprimer qui va faire apparaitre la modal -->
         <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
             <i class="glyphicon glyphicon-trash"></i>Supprimer</button>
-        {{ form_end(edit_form) }}
-        <div class="modal fade" id="infos">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">x</button>
-                        <h4 class="modal-title">Confirmation</h4>
-                    </div>
-                    <div class="modal-body">
-                        Etes-vous sur de vouloir supprimer cet article ?
-                    </div>
+    </div>
+    <div class="modal fade" id="infos">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close">x</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    Etes-vous sur de vouloir supprimer cet article ?
+                </div>
+                {{ form_start(delete_form) }}
+                <div class="modal-footer">
                     {{ form_start(delete_form) }}
-                    <div class="modal-footer">
-                        {{ form_widget(delete_form) }}
-                        <button type="submit" value="OUI" class=" btn btn-info">OUI</button>
-                        <button class="btn btn-info" data-dismiss="modal">NON</button>
-                        {{ form_end(delete_form) }}
-
-
-    {{ form_start(edit_form) }}
-    <div class="formulaire">
-        {{ form_widget(edit_form) }}
-
-        <input type="submit" class="btn btn-success" value="Editer" />
-
-        <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
-
-            <input type="submit" class="btn btn-danger" value="Supprimer">
-            {{ form_end(delete_form) }}
-
-
+                    <button type="submit" value="OUI" class=" btn btn-info">OUI</button>
+                    {{ form_end(delete_form) }}
+                    <button class="btn btn-info" data-dismiss="modal">NON</button>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

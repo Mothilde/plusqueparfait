@@ -22,10 +22,8 @@
         <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
         <h1>Mon Repas</h1>
     </div>
-
     <table>
         <tbody>
-
             <tr>
                 <th>Nom repas</th>
                 <td>{{ liste.nomRepas }}</td>
@@ -44,49 +42,30 @@
             </tr>
         </tbody>
     </table>
-<div class="liste_show">
-
-
-            <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-
-            <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
-
-
-
-            <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
-                <i class="glyphicon glyphicon-trash"></i>
-                Supprimer
-            </button>
-        </li>
-
-            <div class="modal fade" id="infos">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close">x</button>
-                            <h4 class="modal-title">Confirmation</h4>
-                        </div>
-                        <div class="modal-body">
-                            Etes-vous sur de vouloir supprimer cet article ?
-                        </div>
-                        {{ form_start(delete_form) }}
-                        <div class="modal-footer">
-                            {{ form_start(delete_form) }}
-                            <button type="submit" value="OUI" class=" btn btn-info">OUI</button>
-                            {{ form_end(delete_form) }}
-                            <button class="btn btn-info" data-dismiss="modal">NON</button>
-                        </div>
-                    </div>
+    <div class="liste_show">
+        <a href="{{ path('liste_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
+        <a href="{{ path('liste_edit', { 'id': liste.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
+        <button data-toggle="modal" class="btn btn-danger" data-target="#infos">
+            <i class="glyphicon glyphicon-trash"></i>Supprimer</button>
+    </div>
+    <div class="modal fade" id="infos">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close">x</button>
+                    <h4 class="modal-title">Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    Etes-vous sur de vouloir supprimer cet article ?
+                </div>
+                {{ form_start(delete_form) }}
+                <div class="modal-footer">
+                    {{ form_start(delete_form) }}
+                    <button type="submit" value="OUI" class=" btn btn-info">OUI</button>
+                    {{ form_end(delete_form) }}
+                    <button class="btn btn-info" data-dismiss="modal">NON</button>
                 </div>
             </div>
-
-
+        </div>
+    </div>
 {% endblock %}
-
-{% block javascripts %}
-    <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-=
-{% endblock %}
-

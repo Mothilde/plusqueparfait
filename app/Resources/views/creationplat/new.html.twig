@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
     <div class="navbar_homepage">
         <nav class="navbar navbar-inverse">
@@ -23,14 +22,10 @@
         <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
         <h1>Mes Recettes</h1>
     </div>
-
     <div id="liste_course_new">
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-
+    {{ form_widget(form) }}
         <input type="submit" class="btn btn-success" value="Créer un nouveau plat" />
-
         <a href="{{ path('creationplat_index') }}"><button type="button" class="btn btn-info">Retour à la liste</button></a>
     {{ form_end(form) }}
-
 {% endblock %}

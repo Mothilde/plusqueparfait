@@ -8,7 +8,6 @@
                     <li> <a href="{{ path('liste_index') }}">Mes repas</a> </li>
                     <li> <a href="{{ path('invites_index') }}">Mes invités</a> </li>
                     <li class="active"> <a href="{{ path('creationplat_index') }}">Mes recettes</a> </li>
-
                 </ul>
                 <form class="navbar-form navbar-right inline-form">
                     <div class="form-group">
@@ -24,28 +23,24 @@
         <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
         <h1>Mes Recettes</h1>
     </div>
-
-
     <table id="liste_course">
         <thead>
             <tr>
                 <th>Nom</th>
                 <th>Actions</th>
-                <!--<th>Description</th>
-                <th>Photos</th>-->
-
             </tr>
         </thead>
         <tbody>
         {% for creationplat in creationplats %}
             <tr>
-                <td>{{ creationplat.nom }}</td>
-
+                <td>
+                    {{ creationplat.nom }}
+                </td>
                 <td>
                     <ul>
                         <li>
 
-                            <a href="{{ path('creationplat_show', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-search">&nbsp;Afficher</button></a></a>
+                            <a href="{{ path('creationplat_show', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-search">&nbsp;Afficher</button></a>
                         </li>
                         <li>
                             <a href="{{ path('creationplat_edit', { 'id': creationplat.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Modifier</button></a>
@@ -56,12 +51,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <ul>
-
-        <li id="creer_plat">
-            <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success">Créer une nouvelle recettes</button></a>
-
-        </li>
-    </ul>
+    <a href="{{ path('creationplat_new') }}"><button type="button" class="btn btn-success liste_show">Créer une nouvelle recette</button></a>
 {% endblock %}

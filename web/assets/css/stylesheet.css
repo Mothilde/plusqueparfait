@@ -2,21 +2,20 @@ body{ /* Body principal */
     background-color: #CDC8AA;
     font-family: Raleway;
 }
-#container{
+
+#container{ /* Id sur la page d'accueil | Réglage de la hauteur */
     margin-left: 0 !important;
     padding-top: 0 !important;
     height: 100% !important;
-
 }
 
-#epices {
-    width:1200px !important;
+#epices { /* Photo d'accueil | Background d'accueil */
+    width:1820px !important;
 }
 
 .navbar_homepage { /* Navbar de la page d'accueil */
     width: 100%;
     padding-bottom: 0;
-
 }
 
 #caro_image { /* Logo du haut avec Caroline dessus */
@@ -36,6 +35,7 @@ body{ /* Body principal */
     margin-left: 7%;
     margin-bottom: 20px;
 }
+
 h1 { /* Modifications sur "Mes Repas" */
     font-size: 37px;
     font-family: Raleway,Extra-Bold 800;
@@ -60,8 +60,6 @@ th, td { /* Modifications sur les élements du tableau -- Bordure ajoutée pour 
 
 td { /* Espacer les textes de la marge de gauche, pour éviter que cela ne soit trop collé */
     padding-left: 6px;
-
-
 }
 
 li { /* Modifications des boutons Bootstrap, et de la dernière colonne du tableau */
@@ -100,7 +98,6 @@ a:focus { /* Modification des liens une fois cliqué */
     margin-left: 100px;
     width: 100%;
     margin-top: 10px;
-
 }
 
 #ingredients { /* tableau creation plat */
@@ -109,21 +106,19 @@ a:focus { /* Modification des liens une fois cliqué */
     padding: 5px;
     text-align: center;
 }
- tr {
-     margin: 5px;
 
- }
+tr {
+ margin: 5px;
+}
 
- #home_page {
-     text-align: center;
-     margin: 50px;
- }
- .bienvenue { /*titre de bienvenue*/
-     margin-left:520px ;
+#home_page {
+ text-align: center;
+ margin: 50px;
+}
 
- }
-
-
+.bienvenue { /*titre de bienvenue*/
+ margin-left:520px ;
+}
 
 .listeEtoile ul {
     margin: 0;
@@ -137,33 +132,21 @@ a:focus { /* Modification des liens une fois cliqué */
     list-style-type: none;
 }
 
+p{
+ text-align: center;
+}
 
+#liste_course { /*tableau creation plat show */
+ width: 30%;
+ margin-left: 7.5%;
+}
 
-
-
-
-
-
-
-
- p{
-     text-align: center;
- }
-
- #liste_course { /*tableau creation plat show */
-     width: 30%;
-     margin-left: 7.5%;
-
- }
-
- #liste_course_new {
-     margin-left: 7.5%;
-     margin-top: 10px;
- }
+#liste_course_new {
+ margin-left: 7.5%;
+ margin-top: 10px;
+}
 
 .liste_show { /* bouton vue liste */
     margin-left: 7.5%;
     margin-top: 10px;
 }
-
-

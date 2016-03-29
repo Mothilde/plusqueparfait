@@ -18,8 +18,10 @@
             </div>
         </nav>
     </div>
-    <h1>Invites</h1>
-
+    <div class="header_menu">
+        <img id="iconetoque" src="{{ asset('assets/images/iconetoque.png') }}" alt="iconetoque" />
+        <h1>Mes invités </h1>
+    </div>
     <table>
         <tbody>
             <tr>
@@ -27,19 +29,16 @@
                 <td>{{ invite.id }}</td>
             </tr>
             <tr>
-                <th>Nominvite</th>
+                <th>Nom invite</th>
                 <td>{{ invite.nomInvite }}</td>
             </tr>
         </tbody>
     </table>
-
+    <div class="liste_show">
             <a href="{{ path('invites_index') }}"><button type="button" class="btn btn-info">Retour à la  liste</button></a>
-
-            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-info glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
-
+            <a href="{{ path('invites_edit', { 'id': invite.id }) }}"><button type="button" class="btn btn-success glyphicon glyphicon-pencil">&nbsp;Editer</button></a>
+            <input type="submit" class="btn btn-danger" value="Supprimer" />
             {{ form_start(delete_form) }}
-                <input type="submit" class="btn btn-danger" value="Supprimer">
-
             {{ form_end(delete_form) }}
-
+    </div>
 {% endblock %}
